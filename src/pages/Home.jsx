@@ -129,7 +129,7 @@ const Home = () => {
               textShadow: "0 0 15px rgba(255, 153, 102, 0.7), 0 0 30px rgba(255, 153, 102, 0.5)"
             }}
           >
-            Hey, I&apos;m Vyom! <br /> 
+            Hey, I&apos;m JATIN! <br /> 
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -169,9 +169,9 @@ const Home = () => {
               textShadow: "0 0 5px rgba(255, 153, 102, 0.3)"
             }}
           >
-            Tech enthusiast with a strong foundation in AI, cybersecurity, and web development. <br />
-            I enjoy creating innovative, user-friendly, and secure applications <br />
-            that solve real-world problems. Always exploring new technologies.
+            I'm Jatin, a tech enthusiast with a strong foundation in AI and web designing. <br />
+            I enjoy creating innovative, user-friendly interactive web designing<br />
+            I currently specialize in frontend development and have recently started <br /> exploring backend technologies. <br />
           </h3>
           
           {/* CTA button */}

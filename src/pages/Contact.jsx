@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaFileDownload } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaFileDownload, FaInstagram } from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -84,7 +84,7 @@ const ContactMe = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Email: <span className="text-amber-400">vyomdubeykp@gmail.com</span>
+          Email: <span className="text-amber-400">jatinbhosale428@gmail.com</span>
         </motion.p>
         
         {/* Animated border corners */}
@@ -100,32 +100,24 @@ const ContactMe = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          <SocialLink href="https://github.com/VMOYD" aria-label="GitHub">
+          <SocialLink href="https://github.com/JatinBhoslae" aria-label="GitHub">
             <FaGithub className="text-3xl md:text-4xl" />
           </SocialLink>
           
-          <SocialLink href="https://www.linkedin.com/in/vyom-dubey/" aria-label="LinkedIn">
+          <SocialLink href="https://www.linkedin.com/in/jatin-bhosale-993712374/" aria-label="LinkedIn">
             <FaLinkedin className="text-3xl md:text-4xl" />
           </SocialLink>
           
-          <SocialLink href="https://x.com/dubey_vyom_" aria-label="Twitter">
+          <SocialLink href="https://x.com/jatinbhosale007?t=QX-ZIBtPqheFDfg5yJqhBg&s=09" aria-label="Twitter">
             <FaTwitter className="text-3xl md:text-4xl" />
           </SocialLink>
           
-          <SocialLink href="https://www.youtube.com/channel/UCpjxHechB6BeyMo4Lcsm9zw?sub_confirmation=1" aria-label="YouTube">
+          <SocialLink href="https://youtube.com/@jatinbhosale181?si=21kv6JsyH2A1kmQz" aria-label="YouTube">
             <FaYoutube className="text-3xl md:text-4xl" />
           </SocialLink>
           
-          <SocialLink href="https://www.codechef.com/users/imperial_head" aria-label="CodeChef">
-            <SiCodechef className="text-3xl md:text-4xl" />
-          </SocialLink>
-          
-          <SocialLink href="https://leetcode.com/u/VMOY/" aria-label="LeetCode">
-            <SiLeetcode className="text-3xl md:text-4xl" />
-          </SocialLink>
-          
-          <SocialLink href="https://www.geeksforgeeks.org/user/vyom_dubey/" aria-label="GeeksforGeeks">
-            <SiGeeksforgeeks className="text-3xl md:text-4xl" />
+          <SocialLink href="https://www.instagram.com/jatin_bhosale_96k?igsh=MWJjM25weDN5OHhkaA==" aria-label="Instagram">
+            <FaInstagram className="text-3xl md:text-4xl" />
           </SocialLink>
         </motion.div>
         
@@ -142,7 +134,7 @@ const ContactMe = () => {
           
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="mailto:vyomdubeykp@gmail.com"
+              href="mailto:jatinbhosale428@gmail.com"
               className="inline-block bg-transparent text-amber-400 px-6 py-3 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"
               whileHover={{ 
                 scale: 1.05, 
@@ -157,7 +149,7 @@ const ContactMe = () => {
             </motion.a>
             
             <motion.a
-              href="https://drive.google.com/file/d/1O5s829OiJKFRWuEbRPIg_G2XDuEjDAbP/view?usp=sharing"
+              href="https://drive.google.com/file/d/1l_G2YA60Y8KCDwWix_1gb_Qt-ei16Ki3/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-transparent text-amber-400 px-6 py-3 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"

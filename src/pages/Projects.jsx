@@ -6,81 +6,15 @@ import { useNavigate } from "react-router-dom";
 import ProjectModal from "./ProjectModal"; 
 import { getTechIcon } from "./TechIcons";
 
-const projects = [
-  { 
-    name: "Past Preserve -- Coming Soon", 
-    desc: "A digital time capsule web app.", 
-    link: "", 
-    code: "", 
-    techstackused: "React.js, Node.js, MongoDB, Express.js, Firebase",
-    techstackicons: ["reactjs", "nodejs", "mongodb", "expressjs", "firebase"]
-  },
+const projects = [ 
   {
-    name: "VisionScript",
-    desc: "An AI-powered project that utilizes OCR and deep learning for image processing using OpenCV, Tesseract OCR, and TensorFlow.",
-    link: "",
-    code: "https://github.com/vmoyd/VisionScript",
-    techstackused: "Python, OpenCV, Tesseract OCR, TensorFlow, Deep Learning, Image Processing",
-    techstackicons: ["python", "opencv", "tensorflow"]
-  },
-  { 
-    name: "Portfolio", 
-    desc: "My personal portfolio website.", 
-    link: "https://vmoyd.github.io/portfolio-app/", 
-    code: "https://github.com/VMOYD/portfolio-app", 
-    techstackused: "React.js, Vite, HTML5, CSS3, JavaScript, Material-UI",
-    techstackicons: ["reactjs", "vitejs", "html5", "css3", "js", "materialui"]
-  },
-  { 
-    name: "Sokoban Game", 
-    desc: "A classic puzzle game where you push boxes onto target spots, built using Python and Pygame.", 
-    link: "", 
-    code: "https://github.com/VMOYD/sokoban-game", 
-    techstackused: "Python, Py-Game",
-    techstackicons: ["python"]
-  },
-  {
-    name: "Selenium MultiScraper",
-    desc: "A high-performance, multi-threaded web scraper for extracting student result data from Bundelkhand University.",
-    link: "",
-    code: "https://github.com/vmoyd/selenium-speedscraper",
-    techstackused: "Python, Selenium, Web Scraping, Multithreading",
-    techstackicons: ["python"]
-  },
-  { 
-    name: "Library Management System", 
-    desc: "A console-based system to manage books, borrowing, and librarian functions.", 
-    link: "", 
-    code: "https://github.com/VMOYD/library-management-system", 
-    techstackused: "C++, File I/O, Curses",
-    techstackicons: ["c++"]
-  },
-  { 
-    name: "VoteX", 
-    desc: "A secure online voting platform.", 
-    link: "", 
-    code: "https://github.com/VMOYD/VoteX", 
-    techstackused: "PHP, MySQL, HTML5, CSS3, JavaScript",
-    techstackicons: ["php", "mysql", "html5", "css3", "js"]
-  },
-  {
-    name: "Intrustion Detection System",
-    desc: "A system to detect network intrusions using machine learning.",
-    link: "",
-    code:"",
-    techstackused: "Python, Machine Learning,",
-    techstackicons: ["python"]
-  },
-  {
-    name: "Code Visualizer VScode Extension",
-    desc: "A VSCode extension that visualizes code structure and flow.",
-    link: "",
-    code: "https://github.com/VMOYD/Code-Visualizer-VS-code-Extention-",
-    techstackused: "JavaScript, TypeScript, VSCode API",
-    techstackicons: ["js", "typescript"]
+    name: "CSI-Website", 
+    desc: "A website that showing work,head,info about CSI-CATT DMCE", 
+    link: "https://jatinbhoslae.github.io/csi-website/", 
+    code: "https://github.com/JatinBhoslae/csi-website.git", 
+    techstackused: "HTML5, CSS3, JavaScript,Bootstrap",
+    techstackicons: ["html5", "css3", "js", "bootstrap"]
   }
-
-  
 ];
 
 // Add CSS animation for shine effect to your main stylesheet or inline styles

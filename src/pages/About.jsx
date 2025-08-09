@@ -5,39 +5,34 @@ import { Link } from "react-router-dom";
 // Timeline Data
 const timeline = [
   {
-    year: "2024-Present",
-    title: "AI Intern",
-    desc: "Currently working as an AI Intern at NetApp, building AI-driven solutions. Diving deep into machine learning, automation, and real-world problem-solving while making models smarter (and hopefully not self-aware).",
-    iconPath: "icons8-netapp-logo.svg",
-    path: "https://www.netapp.com/",
+    year: "2025-Present",
+    title: "Tech Team Member",
+    desc: "Currently studying in TE Computer Engineering. And currently in Tech team member in CSI-CATT DMCE ",
+    iconPath: "icons8-netapp-logo.svg"
   },
   {
-    year: "2023-2024",
-    title: "Master's Degree",
-    desc: "Completed my MCA from VIT Vellore, where I spent countless nights debugging, optimizing, and surviving deadlines. Specialized in AI, cloud computing, and software development while working on projects that made me question my life choices (but in a good way).",
-    iconPath: "Vellore_Institute_of_Technology_seal_2017.svg.png",
-    path: "https://www.vit.ac.in/",
-  },
-  {
-    year: "2020-2023",
+    year: "2023-2027",
     title: "Bachelor's Degree",
-    desc: "Earned my BCA from Bundelkhand University, Jhansi. This is where my coding journey truly kicked off—building projects, exploring new tech, and realizing that Stack Overflow is a coder's best friend.",
-    iconPath: "bundelkhand_university_logo.png",
-    path: "https://www.bujhansi.ac.in/en",
+    desc: "Currently pursuing BE in Computer Engineering from Datta Meghe College Of Engineering , where I currently spending countless nights debugging, optimizing, and surviving deadlines. Working on projects that made me question my life choices (but in a good way).",
+    iconPath: "Vellore_Institute_of_Technology_seal_2017.svg.png"
   },
   {
-    year: "2016",
+    year: "2021-2023",
+    title: "Junior College",
+    desc: "Complted my junior college from T.H. wajekar jr. college phunde. This is where my coding journey truly kicked off—building projects, exploring new tech, and realizing that Stack Overflow is a coder's best friend.",
+    iconPath: "bundelkhand_university_logo.png"
+  },
+  {
+    year: "2022",
     title: "Started Coding",
-    desc: "Started coding in class 9 with HTML, thinking I was hacking the matrix. Built my first webpage with 'blink' tags and bright colors—because who needed UI/UX back then? That moment ignited my love for development!",
-    iconPath: "dragon.png",
-    path: "",
+    desc: "Started coding in class 12 with HTML, thinking I was hacking the matrix. Built my first webpage with 'h1' tags and bright colors—because who needed UI/UX back then? That moment ignited my love for development!",
+    iconPath: "dragon.png"
   },
   {
-    year: "2002 (Born!)",
+    year: "2005 (Born!)",
     title: "The Beginning",
-    desc: "The origin story of a curious mind who would one day tinker with AI and build cool things. From baby steps to keystrokes, the journey began with an insatiable curiosity for how things work.",
-    iconPath: "brain-ok3.png",
-    path: "",
+    desc: "The origin story of a curious mind who would one day tinker and build cool things. From baby steps to keystrokes, the journey began with an insatiable curiosity for how things work.",
+    iconPath: "brain-ok3.png"
   },
 ];
 

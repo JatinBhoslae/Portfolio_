@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaGithub, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -18,10 +18,10 @@ const Footer = () => {
   }, [scrolled]);
 
   const socialLinks = [
-    { icon: <FaGithub />, url: "https://github.com/VMOYD" },
-    { icon: <FaTwitter />, url: "https://twitter.com" },
-    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/vyom-dubey/" },
-    { icon: <FaYoutube />, url: "https://www.youtube.com/channel/UCpjxHechB6BeyMo4Lcsm9zw?sub_confirmation=1" }
+    { icon: <FaGithub />, url: "https://github.com/JatinBhoslae" },
+    { icon: <FaTwitter />, url: "https://x.com/jatinbhosale007?t=QX-ZIBtPqheFDfg5yJqhBg&s=09" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/jatin-bhosale-993712374/" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/jatin_bhosale_96k?igsh=MWJjM25weDN5OHhkaA==" }
   ];
 
   return (
@@ -62,7 +62,7 @@ const Footer = () => {
       
       {/* Copyright */}
       <div className="relative">
-        <p className="text-gray-400 text-sm">© Vyom Dubey 2025</p>
+        <p className="text-gray-400 text-sm">© Jatin Bhosale 2025</p>
         <div className="absolute -inset-1 bg-cyan-500 opacity-0 hover:opacity-10 blur-md rounded-full -z-10 transition-opacity duration-300"></div>
       </div>
       

@@ -7,22 +7,17 @@ const techCategories = [
   { 
     category: "Frontend", 
     theme: "neural",
-    techs: ["React", "Vite", "HTML5", "CSS3", "JavaScript", "Material UI"] 
-  },
-  { 
-    category: "Backend", 
-    theme: "terminal",
-    techs: ["Node.js", "Express", "Flask", "PHP"] 
+    techs: ["React", "Vite", "HTML5", "CSS3", "JavaScript","Tailwind","Bootstrap"] 
   },
   { 
     category: "Database", 
     theme: "vortex",
-    techs: ["MongoDB", "MySQL", "Firebase"] 
+    techs: ["MongoDB", "SQL"] 
   },
   { 
-    category: "AI/Automation", 
+    category: "Tools", 
     theme: "ai",
-    techs: ["Python", "OpenCV", "TensorFlow", "Deep Learning", "Selenium", "Web Scraping"] 
+    techs: [ "Git", "Github", "VsCode", "Chatgpt"] 
   }
 ];
 
@@ -52,10 +47,11 @@ const TechIcon = ({ tech, theme }) => {
     "NodeJS": "nodejs",
     "MongoDB": "mongodb",
     "Python": "python",
-    "Material UI": "materialui",
-    "C++": "c++",
-    "PHP": "php",
-    "MySQL": "mysql"
+    "SQL": "sql",
+    "Github":"github",
+    "Git":"git",
+    "VsCode":"vscode"
+    
   };
   
   // Check if we have a matching icon in tech-stack-icons

@@ -2,60 +2,14 @@ import { motion } from "framer-motion";
 
 const certificates = [
     { 
-      certificate: "Google Cloud Computing Fundamentals", 
-      provider: "Google Cloud", 
-      issuedate: "JAN 2023", 
-      desc: "Introduction to core computing services in Google Cloud.",
-      image: "GCP-Computing-Fundamentals.png",
-      url: "https://cloud.google.com/training"
-    },
-    { 
-      certificate: "The Basics of Google Cloud Computing", 
-      provider: "Google Cloud", 
-      issuedate: "JUL 2023", 
-      desc: "Fundamentals of cloud computing on Google Cloud.",
-      image: "The-Basics-of-Google-Cloud-Compute.png",
-      url: "https://cloud.google.com/training"
-    },
-    { 
-      certificate: "Google Cloud App Engine Fundamentals", 
-      provider: "Google Cloud", 
-      issuedate: "AUG 2023", 
-      desc: "Learn to deploy and manage applications with Google App Engine.",
-      image: "App_Engine_GCP.png",
-      url: "https://cloud.google.com/training"
-    },
-    { 
-      certificate: "NVIDIA Deep Learning Institute Certification", 
-      provider: "NVIDIA", 
-      issuedate: "SEPT 2023", 
-      desc: "Deep learning fundamentals and AI model training with NVIDIA.",
-      image: "NVIDIA-DLI.jpeg",
-      url: "https://www.nvidia.com/en-us/deep-learning-ai/education/"
-    },
-    { 
-      certificate: "Google Cloud Networking Fundamentals", 
-      provider: "Google Cloud", 
-      issuedate: "December 2023", 
-      desc: "Introduction to networking and security principles on Google Cloud.",
-      image: "Network-Fundamentals-GCP.png",
-      url: "https://cloud.google.com/training"
-    },
-    { 
-      certificate: "Google Associate Cloud Engineer", 
-      provider: "Google Cloud", 
-      issuedate: "FEB 2024", 
-      desc: "Proficiency in deploying and managing applications on Google Cloud.",
-      image: "GCP-Computing-Fundamentals.png",
-      url: "https://cloud.google.com/certification"
-    },
-    { 
-      certificate: "AWS Certified Solutions Architect", 
-      provider: "Amazon Web Services", 
-      issuedate: "JUL 2024", 
-      desc: "Validated expertise in AWS cloud solutions.",
-      image: "AWS_Solution_Architecture.png"
+      certificate: "Achivement", 
+      provider: "CSI - CATT DMCE", 
+      issuedate: "JULY 2025", 
+      desc: "1 year experience in sponsorship team",
+      image: "GCP-Computing-Fundamentals.jpeg",
+      url: "https://drive.google.com/file/d/1NZGstsEhDXsj8hqartuAAoSt6YCm3Uxp/view?usp=sharing"
     }
+   
   ];
   
 
