@@ -1,22 +1,53 @@
 import { motion } from "framer-motion";
 
 const certificates = [
-    { 
-      certificate: "Achivement", 
-      provider: "CSI - CATT DMCE", 
-      issuedate: "JULY 2025", 
-      desc: "1 year experience in sponsorship team",
-      image: "GCP-Computing-Fundamentals.jpeg",
-      url: "https://drive.google.com/file/d/1NZGstsEhDXsj8hqartuAAoSt6YCm3Uxp/view?usp=sharing"
-    }
-   
-  ];
-  
+  {
+    certificate: "Certification in Learn Generative AI",
+    provider: "EduBridge",
+    issuedate: "Sept 15, 2025",
+    desc: "A vocational course offered by EduBridge for successfully completing the Certification in Learn Generative AI.",
+    image: "/portfolio-app/certificates/EduBridge.jpg",
+    url: "/portfolio-app/certificates/EduBridge.pdf"
+  },
+  {
+    certificate: "AI Web Development Internship",
+    provider: "Internshala (InAmigos Foundation)",
+    issuedate: "July 01, 2026",
+    desc: "Certificate of Selection for AI Web Development internship at InAmigos Foundation.",
+    image: "/portfolio-app/certificates/Internshala.jpg",
+    url: "/portfolio-app/certificates/Internshala.pdf"
+  },
+  {
+    certificate: "Sponsorship Team certificate",
+    provider: "CSI - CATT DMCE",
+    issuedate: "MAY 2025",
+    desc: "1 year experience in Sponsorship Team",
+    image: "GCP-Computing-Fundamentals.jpeg",
+    url: "https://drive.google.com/file/d/1NZGstsEhDXsj8hqartuAAoSt6YCm3Uxp/view?usp=sharing"
+  },
+  {
+    certificate: "Technical Team Certificate",
+    provider: "CSI - CATT DMCE",
+    issuedate: "MAY 2026",
+    desc: "1 year experience in Technical Team.",
+    image: "/portfolio-app/certificates/TechnicalTeam.jpg",
+    url: "/portfolio-app/certificates/Technical Team .pdf"
+  },
+  {
+    certificate: "Internship offer letter",
+    provider: "CODE ALHPA",
+    issuedate: "July 02 2026",
+    desc: "Certificate awarded to Jatin Vijay Bhosale.",
+    image: "/portfolio-app/certificates/Participation.jpg",
+    url: "/portfolio-app/certificates/Jatin Vijay Bhosale (1).pdf"
+  }
+];
+
 
 const Certificates = () => {
   return (
-    <section 
-      id="certificates" 
+    <section
+      id="certificates"
       className="min-h-screen flex flex-col items-center justify-center overflow-hidden relative"
       style={{
         background: "radial-gradient(circle at center, #0f1523 0%, #000000 100%)",
@@ -42,9 +73,9 @@ const Certificates = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Horizontal lines */}
         {[...Array(20)].map((_, i) => (
-          <div 
+          <div
             key={`h-${i}`}
-            className="absolute w-full h-px" 
+            className="absolute w-full h-px"
             style={{
               top: `${i * 5}%`,
               background: 'linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent)',
@@ -52,12 +83,12 @@ const Certificates = () => {
             }}
           />
         ))}
-        
+
         {/* Vertical lines */}
         {[...Array(20)].map((_, i) => (
-          <div 
+          <div
             key={`v-${i}`}
-            className="absolute h-full w-px" 
+            className="absolute h-full w-px"
             style={{
               left: `${i * 5}%`,
               background: 'linear-gradient(0deg, transparent, rgba(0, 255, 255, 0.2), transparent)',
@@ -66,13 +97,13 @@ const Certificates = () => {
           />
         ))}
       </div>
-      
+
       {/* Ambient glow effects - matches Projects */}
       <div className="fixed top-1/3 left-1/4 w-64 h-64 rounded-full bg-purple-500 opacity-10 blur-3xl"></div>
       <div className="fixed bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-orange-500 opacity-10 blur-3xl"></div>
-      
+
       {/* Scanline effect - matches Projects */}
-      <motion.div 
+      <motion.div
         className="fixed inset-0 pointer-events-none z-50 opacity-10"
         style={{
           background: "linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 50%)",
@@ -124,7 +155,7 @@ const Certificates = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl mx-auto relative z-10">
         {certificates.map((cert, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -133,10 +164,10 @@ const Certificates = () => {
             whileHover={{ scale: 1.03 }}
             className="relative cursor-pointer group transition-all duration-300"
           >
-            <a 
-              href={cert.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={cert.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="block h-full"
             >
               <div className="relative p-6 bg-black/60 backdrop-blur-md rounded-lg border border-amber-900/50 overflow-hidden h-full">
@@ -145,14 +176,14 @@ const Certificates = () => {
                 <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-amber-400"></div>
                 <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-amber-400"></div>
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-amber-400"></div>
-                
+
                 {/* Certificate image */}
                 <div className="mb-4 relative group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-full h-32 flex items-center justify-center overflow-hidden rounded-md border border-amber-900/30 bg-gradient-to-b from-black to-gray-900">
                     {cert.image ? (
-                      <img 
-                        src={cert.image} 
-                        alt={cert.certificate} 
+                      <img
+                        src={cert.image}
+                        alt={cert.certificate}
                         className="w-full h-full object-contain p-2"
                         onError={(e) => {
                           e.target.onerror = null;
@@ -165,9 +196,9 @@ const Certificates = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   {/* Shine effect on image hover - same as Projects cards */}
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100"
                     style={{
                       background: "linear-gradient(45deg, transparent 45%, rgba(255, 153, 102, 0.1) 50%, transparent 55%)"
@@ -183,23 +214,23 @@ const Certificates = () => {
                     }}
                   />
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-amber-400 mb-2">
                   {cert.certificate}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-1 flex items-center">
-                  <span className="w-20 inline-block opacity-70">Provider:</span> 
+                  <span className="w-20 inline-block opacity-70">Provider:</span>
                   <span className="ml-2">{cert.provider}</span>
                 </p>
-                
+
                 <p className="text-gray-300 mb-1 flex items-center">
                   <span className="w-20 inline-block opacity-70">Issued:</span>
                   <span className="ml-2">{cert.issuedate}</span>
                 </p>
-                
+
                 <p className="text-gray-300 mt-2 border-t border-amber-900/30 pt-2">{cert.desc}</p>
-                
+
                 {/* View button - styled to match Projects */}
                 {/* <motion.div 
                   className="mt-3 flex justify-end"
@@ -217,7 +248,7 @@ const Certificates = () => {
                     View Details
                   </span>
                 </motion.div> */}
-                
+
                 {/* Hover glow effect - matches Projects cards */}
                 <div className="absolute inset-0 bg-amber-500 opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-lg"></div>
               </div>
@@ -228,51 +259,51 @@ const Certificates = () => {
 
       </div>
       <div>
-        
+
       </div>
-        <motion.div
-          className="flex justify-center mt-16 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <motion.button
-            onClick={() => window.location.href = '#projects'}
-            className="relative overflow-hidden group bg-transparent text-amber-400 px-8 py-4 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"
-            whileHover={{ 
-            scale: 1.05, 
+      <motion.div
+        className="flex justify-center mt-16 mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <motion.button
+          onClick={() => window.location.href = '#projects'}
+          className="relative overflow-hidden group bg-transparent text-amber-400 px-8 py-4 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"
+          whileHover={{
+            scale: 1.05,
             boxShadow: "0 0 20px rgba(255, 153, 102, 0.6)",
             backgroundColor: "rgba(255, 153, 102, 0.1)"
-            }}
-            style={{
+          }}
+          style={{
             textShadow: "0 0 5px rgba(255, 153, 102, 0.7)"
-            }}
-          >
-            <span className="relative z-10 flex items-center gap-2">
-            Projects 
+          }}
+        >
+          <span className="relative z-10 flex items-center gap-2">
+            Projects
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3 " />
             </svg>
-            </span>
-            
-            <div 
+          </span>
+
+          <div
             className="absolute inset-0 opacity-0 group-hover:opacity-100"
             style={{
               background: "linear-gradient(45deg, transparent 45%, rgba(255, 153, 102, 0.2) 50%, transparent 55%)",
               animation: "shine 3s infinite",
             }}
-            />
-            
-            <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-amber-400"></div>
-            <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-amber-400"></div>
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-amber-400"></div>
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-amber-400"></div>
-          </motion.button>
-        </motion.div>
+          />
 
-        {/* Bottom decoration - transition to footer */}
-      <motion.div 
+          <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-amber-400"></div>
+          <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-amber-400"></div>
+          <div className="absolute bottom-0 left-0 w-3 h-3 border-b border-l border-amber-400"></div>
+          <div className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-amber-400"></div>
+        </motion.button>
+      </motion.div>
+
+      {/* Bottom decoration - transition to footer */}
+      <motion.div
         className="w-full max-w-4xl mx-auto mt-20 relative z-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -291,8 +322,8 @@ const Certificates = () => {
           <div className="h-px w-1/3 bg-gradient-to-r from-amber-400/50 to-transparent"></div>
         </div>
       </motion.div>
-      
-      
+
+
       {/* Add required keyframes for animations */}
       <style jsx>{`
         @keyframes shine {

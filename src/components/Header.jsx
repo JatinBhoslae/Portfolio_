@@ -44,14 +44,14 @@ const Header = () => {
         />
       </div>
 
-      {/* Logo - updated glow to amber */}
-      <div className="relative">
-        <img 
-          src="/portfolio-app/VD.png" 
-          alt="Logo header" 
-          className="h-12 cursor-pointer hover:scale-105 transition-transform duration-300"
-        />
-        <div className="absolute -inset-1 bg-amber-500 opacity-20 blur-md rounded-full -z-10"></div>
+      {/* Logo text - updated to match amber theme */}
+      <div className="relative cursor-pointer hover:scale-105 transition-transform duration-300">
+        <Link to="/">
+          <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500" style={{ textShadow: "0 0 10px rgba(255, 153, 102, 0.4)" }}>
+            Jatin Bhosale
+          </h1>
+        </Link>
+        <div className="absolute -inset-2 bg-amber-500 opacity-10 blur-md rounded-lg -z-10"></div>
       </div>
 
       {/* Desktop Navigation - updated colors to amber/orange */}

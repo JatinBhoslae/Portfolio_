@@ -5,9 +5,27 @@ import { Link } from "react-router-dom";
 // Timeline Data
 const timeline = [
   {
-    year: "2025-Present",
+    year: "July 2026",
+    title: "Inamgios Internship",
+    desc: "Completed an internship at Inamgios.",
+    iconPath: "icons8-netapp-logo.svg"
+  },
+  {
+    year: "2025-2026",
+    title: "Google Student Ambassador",
+    desc: "Selected as a Google Student Ambassador to foster a thriving tech community, organize developer workshops, and connect students with Google's latest technologies.",
+    iconPath: "icons8-netapp-logo.svg"
+  },
+  {
+    year: "2025-2026",
     title: "Tech Team Member",
     desc: "Currently studying in TE Computer Engineering. And currently in Tech team member in CSI-CATT DMCE ",
+    iconPath: "icons8-netapp-logo.svg"
+  },
+  {
+    year: "2024-2025",
+    title: "Sponsorship Member",
+    desc: "Spearheaded the sponsorship initiatives, successfully securing partnerships and funding for major technical symposiums and hackathons.",
     iconPath: "icons8-netapp-logo.svg"
   },
   {

@@ -104,7 +104,7 @@ const ContactMe = () => {
             <FaGithub className="text-3xl md:text-4xl" />
           </SocialLink>
           
-          <SocialLink href="https://www.linkedin.com/in/jatin-bhosale-993712374/" aria-label="LinkedIn">
+          <SocialLink href="https://www.linkedin.com/in/jatin-bhosale-846397301/" aria-label="LinkedIn">
             <FaLinkedin className="text-3xl md:text-4xl" />
           </SocialLink>
           
@@ -149,7 +149,7 @@ const ContactMe = () => {
             </motion.a>
             
             <motion.a
-              href="https://drive.google.com/file/d/1l_G2YA60Y8KCDwWix_1gb_Qt-ei16Ki3/view?usp=sharing"
+              href="https://drive.google.com/file/d/1OJRkvClBjqizj1RM19gCZu1YLAJdUGX1/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-transparent text-amber-400 px-6 py-3 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"

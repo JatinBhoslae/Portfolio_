@@ -10,14 +10,19 @@ const techCategories = [
     techs: ["React", "Vite", "HTML5", "CSS3", "JavaScript","Tailwind","Bootstrap"] 
   },
   { 
+    category: "Backend", 
+    theme: "terminal",
+    techs: ["Python", "Express.js", "Node.js", "FastAPI", "REST APIs"] 
+  },
+  { 
     category: "Database", 
-    theme: "vortex",
-    techs: ["MongoDB", "SQL"] 
+    theme: "neural",
+    techs: ["MongoDB", "MongoDB Atlas", "SQL/MySQL"] 
   },
   { 
     category: "Tools", 
-    theme: "ai",
-    techs: [ "Git", "Github", "VsCode", "Chatgpt"] 
+    theme: "neural",
+    techs: ["Git", "Github", "VsCode", "Chrome DevTools", "Vercel"] 
   }
 ];
 
@@ -34,6 +39,27 @@ const TechIcon = ({ tech, theme }) => {
   
   const color = glowColors[theme] || "#00ffff";
   
+  // Mapping of custom image paths
+  const customIconsMap = {
+    "Express.js": "/portfolio-app/express-logo.png",
+    "FastAPI": "/portfolio-app/fastapi-logo.png",
+    "REST APIs": "/portfolio-app/restapi-logo.png",
+    "Vercel": "/portfolio-app/vercel-logo.png"
+  };
+
+  const customIcon = customIconsMap[tech];
+
+  if (customIcon) {
+    return (
+      <div className="relative w-14 h-14 flex flex-col items-center justify-center">
+        <div className="w-10 h-10 flex items-center justify-center overflow-hidden rounded-md">
+          <img src={customIcon} alt={`${tech} logo`} className="w-full h-full object-contain" />
+        </div>
+        <span className="text-xs mt-2 text-gray-300 whitespace-nowrap">{tech}</span>
+      </div>
+    );
+  }
+
   // Mapping of tech names to tech-stack-icons identifiers
   const techIconsMap = {
     "React": "reactjs",
@@ -50,8 +76,19 @@ const TechIcon = ({ tech, theme }) => {
     "SQL": "sql",
     "Github":"github",
     "Git":"git",
-    "VsCode":"vscode"
-    
+    "VsCode":"vscode",
+    "Bootstrap": "bootstrap5",
+    "Tailwind": "tailwindcss",
+    "Chatgpt": "chatgpt",
+    "GraphQL": "graphql",
+    "API": "api",
+    "MongoDB Atlas": "mongodb",
+    "SQL/MySQL": "mysql",
+    "Chrome DevTools": "chrome",
+    "AI Tools": "chatgpt",
+    "Prompt Engineering": "chatgpt",
+    "AI-assisted Development": "github",
+    "API Integration": "api"
   };
   
   // Check if we have a matching icon in tech-stack-icons

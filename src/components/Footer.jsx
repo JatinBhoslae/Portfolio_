@@ -20,7 +20,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: <FaGithub />, url: "https://github.com/JatinBhoslae" },
     { icon: <FaTwitter />, url: "https://x.com/jatinbhosale007?t=QX-ZIBtPqheFDfg5yJqhBg&s=09" },
-    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/jatin-bhosale-993712374/" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/jatin-bhosale-846397301/" },
     { icon: <FaInstagram />, url: "https://www.instagram.com/jatin_bhosale_96k?igsh=MWJjM25weDN5OHhkaA==" }
   ];
 

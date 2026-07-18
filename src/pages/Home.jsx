@@ -117,42 +117,81 @@ const Home = () => {
       >
         {/* Header section */}
         <div 
-          className="z-20 w-full flex justify-center" 
-          style={{marginTop: "30vh", marginBottom: "30vh"}}
+          className="z-20 w-full flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-4 md:px-8" 
+          style={{marginTop: "20vh", marginBottom: "20vh"}}
         >
-          <motion.h1 
-            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 pb-2"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            style={{
-              textShadow: "0 0 15px rgba(255, 153, 102, 0.7), 0 0 30px rgba(255, 153, 102, 0.5)"
-            }}
-          >
-            Hey, I&apos;m JATIN! <br /> 
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+          <div className="flex-1 text-center md:text-left relative flex flex-col items-center md:items-start">
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 pb-4 leading-tight"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              style={{
+                textShadow: "0 0 15px rgba(255, 153, 102, 0.7), 0 0 30px rgba(255, 153, 102, 0.5)"
+              }}
             >
-              Welcome to my corner <br /> of the internet!
-            </motion.span>
-          </motion.h1>
+              Hey, I&apos;m JATIN! <br /> 
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-3xl md:text-5xl mt-2 block"
+              >
+                Welcome to my corner <br /> of the internet!
+              </motion.span>
+            </motion.h1>
+            
+            {/* Animated glitch line */}
+            <motion.div 
+              className="h-px bg-amber-400 mt-6"
+              animate={{ 
+                opacity: [0.3, 0.7, 0.3],
+                width: ["40%", "70%", "40%"]
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 3,
+                ease: "easeInOut"
+              }}
+            />
+          </div>
           
-          {/* Animated glitch line */}
           <motion.div 
-            className="absolute h-px w-3/4 bg-amber-400 bottom-0 left-1/2 -translate-x-1/2"
-            animate={{ 
-              x: ["-5%", "5%"],
-              opacity: [0.3, 0.7, 0.3],
-              width: ["70%", "75%", "70%"]
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 3,
-              ease: "easeInOut"
-            }}
-          />
+            className="flex-1 flex justify-center md:justify-end mt-16 md:mt-0"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="relative w-64 h-64 md:w-[350px] md:h-[400px] rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-[0_0_40px_rgba(255,153,102,0.4)]">
+              <img 
+                src="/portfolio-app/profile%20pic/photo.jpeg" 
+                alt="Jatin Bhosale" 
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/portfolio-app/VD.png"; // Fallback to an existing image
+                }}
+              />
+              {/* Shine effect over image */}
+              <motion.div 
+                className="absolute inset-0 z-10 pointer-events-none"
+                style={{
+                  background: "linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.2) 50%, transparent 60%)",
+                }}
+                animate={{
+                  left: ["-100%", "200%"],
+                  top: ["-100%", "200%"]
+                }}
+                transition={{
+                  duration: 2.5,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: "easeInOut"
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+          </motion.div>
         </div>
         
         {/* Tech stack section */}

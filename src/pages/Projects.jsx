@@ -8,12 +8,28 @@ import { getTechIcon } from "./TechIcons";
 
 const projects = [ 
   {
-    name: "CSI-Website", 
-    desc: "A website that showing work,head,info about CSI-CATT DMCE", 
-    link: "https://jatinbhoslae.github.io/csi-website/", 
-    code: "https://github.com/JatinBhoslae/csi-website.git", 
-    techstackused: "HTML5, CSS3, JavaScript,Bootstrap",
-    techstackicons: ["html5", "css3", "js", "bootstrap"]
+    name: "Vein Link - Blood Mobilization System",
+    desc: "A next-generation blood mobilization system with high-frequency geospatial tracking, tactical identity verification, and predictive logistics.",
+    link: "https://vein-link.vercel.app/",
+    code: "https://github.com/JatinBhoslae/VeinLink",
+    techstackused: "React, Node.js, Express, MongoDB, Socket.IO, Tailwind",
+    techstackicons: ["reactjs", "nodejs", "mongodb", "tailwindcss"]
+  },
+  {
+    name: "Ajay Bhosale Photography",
+    desc: "A cinematic photography portfolio website featuring smooth scrolling, dynamic 3D elements, and elegant animations.",
+    link: "https://ajay-bhosale-photography.vercel.app/",
+    code: "https://github.com/JatinBhoslae/AjayBhosalePhotography",
+    techstackused: "React, Vite, Tailwind CSS, Framer Motion, GSAP, React Three Fiber",
+    techstackicons: ["reactjs", "vitejs", "tailwindcss"]
+  },
+  {
+    name: "Gift Shop E-Commerce Application",
+    desc: "A modern, responsive e-commerce web application with a product catalog, shopping cart, wishlist, and user authentication.",
+    link: "https://gift-shop-steel-iota.vercel.app/",
+    code: "https://github.com/JatinBhoslae/Gift_shop",
+    techstackused: "React, Vite, CSS, Bootstrap",
+    techstackicons: ["reactjs", "vitejs", "css3", "bootstrap5"]
   }
 ];
 
