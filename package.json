@@ -14,7 +14,6 @@
     "clean": "rmdir /s /q dist"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "framer-motion": "^12.4.3",
     "gsap": "^3.12.7",
     "react": "^18.2.0",
@@ -22,6 +21,7 @@
     "react-icons": "^5.4.0",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.1.5",
+    "resend": "^6.17.2",
     "split-type": "^0.3.4",
     "styled-components": "^6.1.15",
     "tech-stack-icons": "^2.1.0",

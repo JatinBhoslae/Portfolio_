@@ -2,35 +2,40 @@ import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaFileDownload, FaInstagram
 import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
   const form = useRef();
   const [status, setStatus] = useState("");
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
     setStatus("sending");
 
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
-        form.current, {
-        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          setStatus("success");
-          form.current.reset();
-          setTimeout(() => setStatus(""), 5000);
-        },
-        (error) => {
-          setStatus("error");
-          console.log('FAILED...', error.text);
-          setTimeout(() => setStatus(""), 5000);
-        }
-      );
+    const formData = new FormData(form.current);
+    const body = {
+      name: formData.get("user_name"),
+      email: formData.get("user_email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        form.current.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+
+    setTimeout(() => setStatus(""), 5000);
   };
   return (
     <section
