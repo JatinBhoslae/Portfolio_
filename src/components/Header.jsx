@@ -44,12 +44,10 @@ const Header = () => {
         />
       </div>
 
-      {/* Logo text - updated to match amber theme */}
+      {/* Logo - updated to JB logo matching amber theme */}
       <div className="relative cursor-pointer hover:scale-105 transition-transform duration-300">
         <Link to="/">
-          <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500" style={{ textShadow: "0 0 10px rgba(255, 153, 102, 0.4)" }}>
-            Jatin Bhosale
-          </h1>
+          <img src="/jb-logo.svg" alt="JB Logo" className="h-12 w-auto" />
         </Link>
         <div className="absolute -inset-2 bg-amber-500 opacity-10 blur-md rounded-lg -z-10"></div>
       </div>
