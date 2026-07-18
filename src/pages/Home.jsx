@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FaFileDownload } from "react-icons/fa";
 import TechStackShowcase from "./TechStackDisplay";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -143,7 +144,7 @@ const Home = () => {
             
             {/* Animated glitch line */}
             <motion.div 
-              className="h-px bg-amber-400 mt-6"
+              className="h-px bg-amber-400 mt-6 w-full"
               animate={{ 
                 opacity: [0.3, 0.7, 0.3],
                 width: ["40%", "70%", "40%"]
@@ -154,6 +155,25 @@ const Home = () => {
                 ease: "easeInOut"
               }}
             />
+            
+            {/* Download Resume Button */}
+            <motion.a
+              href="https://drive.google.com/file/d/1OJRkvClBjqizj1RM19gCZu1YLAJdUGX1/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 bg-transparent text-amber-400 px-6 py-3 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"
+              whileHover={{ 
+                scale: 1.05, 
+                boxShadow: "0 0 15px rgba(255, 153, 102, 0.5)",
+                backgroundColor: "rgba(255, 153, 102, 0.1)"
+              }}
+              style={{
+                textShadow: "0 0 5px rgba(255, 153, 102, 0.7)"
+              }}
+            >
+              <FaFileDownload className="text-lg" />
+              Download Resume
+            </motion.a>
           </div>
           
           <motion.div 
@@ -164,12 +184,12 @@ const Home = () => {
           >
             <div className="relative w-64 h-64 md:w-[350px] md:h-[400px] rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-[0_0_40px_rgba(255,153,102,0.4)]">
               <img 
-                src="/portfolio-app/profile%20pic/photo.jpeg" 
+                src="/profile%20pic/photo.jpeg" 
                 alt="Jatin Bhosale" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = "/portfolio-app/VD.png"; // Fallback to an existing image
+                  e.target.src = "/VD.png"; // Fallback to an existing image
                 }}
               />
               {/* Shine effect over image */}

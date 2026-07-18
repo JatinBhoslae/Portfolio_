@@ -41,10 +41,10 @@ const TechIcon = ({ tech, theme }) => {
   
   // Mapping of custom image paths
   const customIconsMap = {
-    "Express.js": "/portfolio-app/express-logo.png",
-    "FastAPI": "/portfolio-app/fastapi-logo.png",
-    "REST APIs": "/portfolio-app/restapi-logo.png",
-    "Vercel": "/portfolio-app/vercel-logo.png"
+    "Express.js": "/icons/express.png",
+    "FastAPI": "/icons/fast%20api.png",
+    "REST APIs": "/icons/rest%20api.png",
+    "Vercel": "/icons/vercel.png"
   };
 
   const customIcon = customIconsMap[tech];
@@ -265,11 +265,11 @@ const TechStackDisplay = () => {
               {category}
             </motion.h2>
             
-            <div className="relative flex flex-wrap justify-center items-center gap-4 w-full">
+            <div className="relative flex flex-wrap justify-center items-center gap-2 md:gap-4 w-full">
               {techs.map((tech, index) => (
                 <motion.div
                   key={tech}
-                  className="flex flex-col items-center p-2 rounded-xl bg-gray-800 bg-opacity-60 border border-gray-700 relative overflow-hidden"
+                  className="flex flex-col items-center p-2 rounded-xl bg-gray-800 bg-opacity-60 border border-gray-700 relative overflow-hidden w-[72px] md:w-auto"
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}

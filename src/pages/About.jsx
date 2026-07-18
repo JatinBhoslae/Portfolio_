@@ -203,15 +203,17 @@ const About = () => {
                     rel="noopener noreferrer"
                     className="block w-full h-full flex items-center justify-center"
                   >
+                   <div className="w-10 h-10 flex items-center justify-center p-1">
                     <img 
-                      src={`/portfolio-app/${event.iconPath}`} 
-                      alt={`${event.title} icon`}
-                      className="w-10 h-10 object-contain"
+                      src={`/${event.iconPath}`} 
+                      alt={event.category}
+                      className="w-full h-full object-contain"
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = "/portfolio-app/fallback-icon.png";
+                        e.target.src = "/fallback-icon.png";
                       }}
                     />
+                  </div>
                   </a>
                   
                   {/* Animated pulse effect */}

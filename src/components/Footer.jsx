@@ -33,7 +33,7 @@ const Footer = () => {
       {/* Animated border top */}
       <div className="absolute top-0 left-0 h-px w-full overflow-hidden">
         <div 
-          className="h-px w-full bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+          className="h-px w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent"
           style={{
             animation: "moveGradient 4s linear infinite",
           }}
@@ -50,12 +50,12 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-300 text-2xl relative group"
           >
-            <span className="relative z-10 transition-colors hover:text-cyan-400">
+            <span className="relative z-10 transition-colors hover:text-amber-400">
               {link.icon}
             </span>
             
             {/* Hover glow effect */}
-            <span className="absolute -inset-2 -z-10 opacity-0 group-hover:opacity-20 bg-cyan-400 blur-md rounded-full transition-opacity duration-300"></span>
+            <span className="absolute -inset-2 -z-10 opacity-0 group-hover:opacity-20 bg-amber-400 blur-md rounded-full transition-opacity duration-300"></span>
           </a>
         ))}
       </div>
@@ -63,7 +63,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="relative">
         <p className="text-gray-400 text-sm">© Jatin Bhosale 2025</p>
-        <div className="absolute -inset-1 bg-cyan-500 opacity-0 hover:opacity-10 blur-md rounded-full -z-10 transition-opacity duration-300"></div>
+        <div className="absolute -inset-1 bg-amber-500 opacity-0 hover:opacity-10 blur-md rounded-full -z-10 transition-opacity duration-300"></div>
       </div>
       
       {/* Scanlines overlay */}

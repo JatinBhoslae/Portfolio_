@@ -1,8 +1,37 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaFileDownload, FaInstagram } from "react-icons/fa";
 import { SiLeetcode, SiGeeksforgeeks, SiCodechef } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
+  const form = useRef();
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("sending");
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+        form.current, {
+        publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          setStatus("success");
+          form.current.reset();
+          setTimeout(() => setStatus(""), 5000);
+        },
+        (error) => {
+          setStatus("error");
+          console.log('FAILED...', error.text);
+          setTimeout(() => setStatus(""), 5000);
+        }
+      );
+  };
   return (
     <section
       id="contact"
@@ -121,51 +150,83 @@ const ContactMe = () => {
           </SocialLink>
         </motion.div>
         
-        {/* Contact form or additional info could go here */}
+        {/* Contact form */}
         <motion.div
-          className="mt-12 text-center"
+          className="mt-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
         >
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-300 mb-6 text-center">
             Feel free to reach out for collaborations, opportunities, or just to say hello!
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4">
-            <motion.a
-              href="mailto:jatinbhosale428@gmail.com"
-              className="inline-block bg-transparent text-amber-400 px-6 py-3 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"
-              whileHover={{ 
-                scale: 1.05, 
-                boxShadow: "0 0 15px rgba(255, 153, 102, 0.5)",
-                backgroundColor: "rgba(255, 153, 102, 0.1)"
-              }}
-              style={{
-                textShadow: "0 0 5px rgba(255, 153, 102, 0.7)"
-              }}
-            >
-              Send Email
-            </motion.a>
+          <form 
+            ref={form}
+            onSubmit={sendEmail} 
+            className="flex flex-col gap-4 max-w-lg mx-auto"
+          >
+            <div className="flex flex-col gap-1">
+              <label htmlFor="name" className="text-gray-400 text-sm">Your Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="user_name" 
+                required 
+                className="bg-black/50 border border-amber-900/50 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
+                placeholder="John Doe"
+              />
+            </div>
             
-            <motion.a
-              href="https://drive.google.com/file/d/1OJRkvClBjqizj1RM19gCZu1YLAJdUGX1/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-transparent text-amber-400 px-6 py-3 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"
-              whileHover={{ 
-                scale: 1.05, 
-                boxShadow: "0 0 15px rgba(255, 153, 102, 0.5)",
-                backgroundColor: "rgba(255, 153, 102, 0.1)"
-              }}
-              style={{
-                textShadow: "0 0 5px rgba(255, 153, 102, 0.7)"
-              }}
-            >
-              <FaFileDownload className="text-lg" />
-              Download Resume
-            </motion.a>
-          </div>
+            <div className="flex flex-col gap-1">
+              <label htmlFor="email" className="text-gray-400 text-sm">Your Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="user_email" 
+                required 
+                className="bg-black/50 border border-amber-900/50 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors"
+                placeholder="john@example.com"
+              />
+            </div>
+            
+            <div className="flex flex-col gap-1">
+              <label htmlFor="message" className="text-gray-400 text-sm">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4" 
+                required 
+                className="bg-black/50 border border-amber-900/50 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors resize-none"
+                placeholder="Hello, I'd like to work with you on..."
+              ></textarea>
+            </div>
+            
+            <div className="flex justify-center mt-4 flex-col items-center gap-3">
+              <motion.button
+                type="submit"
+                disabled={status === "sending"}
+                className={`bg-transparent text-amber-400 px-8 py-3 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300 w-full sm:w-auto ${status === 'sending' ? 'opacity-50 cursor-not-allowed' : ''}`}
+                whileHover={status !== 'sending' ? { 
+                  scale: 1.05, 
+                  boxShadow: "0 0 15px rgba(255, 153, 102, 0.5)",
+                  backgroundColor: "rgba(255, 153, 102, 0.1)"
+                } : {}}
+                style={{
+                  textShadow: "0 0 5px rgba(255, 153, 102, 0.7)"
+                }}
+              >
+                {status === "sending" ? "Sending..." : "Send Message"}
+              </motion.button>
+              
+              {status === "success" && (
+                <p className="text-green-400 text-sm">Message sent successfully!</p>
+              )}
+              {status === "error" && (
+                <p className="text-red-400 text-sm">Failed to send message. Please try again.</p>
+              )}
+            </div>
+          </form>
         </motion.div>
       </div>
     </section>

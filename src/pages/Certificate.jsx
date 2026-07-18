@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const certificates = [
   {
@@ -6,16 +7,16 @@ const certificates = [
     provider: "EduBridge",
     issuedate: "Sept 15, 2025",
     desc: "A vocational course offered by EduBridge for successfully completing the Certification in Learn Generative AI.",
-    image: "/portfolio-app/certificates/EduBridge.jpg",
-    url: "/portfolio-app/certificates/EduBridge.pdf"
+    image: "/certificates/EduBridge.jpg",
+    url: "/certificates/EduBridge.pdf"
   },
   {
     certificate: "AI Web Development Internship",
     provider: "Internshala (InAmigos Foundation)",
     issuedate: "July 01, 2026",
     desc: "Certificate of Selection for AI Web Development internship at InAmigos Foundation.",
-    image: "/portfolio-app/certificates/Internshala.jpg",
-    url: "/portfolio-app/certificates/Internshala.pdf"
+    image: "/certificates/Internshala.jpg",
+    url: "/certificates/Internshala.pdf"
   },
   {
     certificate: "Sponsorship Team certificate",
@@ -30,21 +31,22 @@ const certificates = [
     provider: "CSI - CATT DMCE",
     issuedate: "MAY 2026",
     desc: "1 year experience in Technical Team.",
-    image: "/portfolio-app/certificates/TechnicalTeam.jpg",
-    url: "/portfolio-app/certificates/Technical Team .pdf"
+    image: "/certificates/TechnicalTeam.jpg",
+    url: "/certificates/Technical Team .pdf"
   },
   {
     certificate: "Internship offer letter",
     provider: "CODE ALHPA",
     issuedate: "July 02 2026",
     desc: "Certificate awarded to Jatin Vijay Bhosale.",
-    image: "/portfolio-app/certificates/Participation.jpg",
-    url: "/portfolio-app/certificates/Jatin Vijay Bhosale (1).pdf"
+    image: "/certificates/Participation.jpg",
+    url: "/certificates/Jatin Vijay Bhosale (1).pdf"
   }
 ];
 
 
 const Certificates = () => {
+  const navigate = useNavigate();
   return (
     <section
       id="certificates"
@@ -269,7 +271,7 @@ const Certificates = () => {
         viewport={{ once: true }}
       >
         <motion.button
-          onClick={() => window.location.href = '#projects'}
+          onClick={() => navigate('/projects')}
           className="relative overflow-hidden group bg-transparent text-amber-400 px-8 py-4 rounded-lg font-bold shadow-lg border border-amber-400 transition-all duration-300"
           whileHover={{
             scale: 1.05,
